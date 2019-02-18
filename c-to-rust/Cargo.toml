@@ -3,6 +3,8 @@ name = "c-to-rust"
 version = "0.1.0"
 authors = ["Alex Crichton <alex@alexcrichton.com>"]
 
+[dependencies]
+libc = "0.2.48"
+
 [lib]
-name = "double_input"
 crate-type = ["staticlib"]

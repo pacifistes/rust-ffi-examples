@@ -10,10 +10,10 @@ all: target/double
 target:
 	mkdir -p $@
 
-target/double: target/main.o target/debug/libdouble_input.a
+target/double: target/main.o target/debug/libc_to_rust.a
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-target/debug/libdouble_input.a: src/lib.rs Cargo.toml
+target/debug/libc_to_rust.a: src/lib.rs Cargo.toml
 	cargo build
 
 target/main.o: src/main.c | target
